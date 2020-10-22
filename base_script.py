@@ -19,7 +19,8 @@ if spec.is_action_continuous():
 if spec.is_action_discrete():
   print("The action is discrete")
 
- print(decision_steps.obs)
+decision_steps, terminal_steps = env.get_steps(behavior_name)
+print(decision_steps.obs)
 
 
 for episode in range(3):
